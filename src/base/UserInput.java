@@ -6,10 +6,10 @@ public class UserInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your name: ");
-        String name = scanner.nextLine();
+        System.out.print("Enter your name: ");
+        String[] fullName = scanner.nextLine().split(" ");
+        System.out.printf("Firstname: %s\nLastname: %s", fullName[0], fullName[1]);
 
-        System.out.println("Your name is " + name);
         scanner.close();
     }
 }
